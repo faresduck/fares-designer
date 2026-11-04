@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fares Alyaqout — Graphic Designer &amp; Motion Designer</title>
+  <meta name="description" content="Portfolio of Fares Alyaqout — Graphic Designer, Motion Designer, and Video Editor with 5+ years of visual storytelling." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-frame">
+      <div class="pl-chrome">
+        <span class="pl-dot"></span><span class="pl-dot"></span><span class="pl-dot"></span>
+        <span class="pl-title mono">fares.design</span>
+      </div>
+      <div class="pl-body mono" id="preloaderText"></div>
+      <div class="pl-bar" aria-hidden="true"><span id="plBarFill"></span></div>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo">Fares<span class="nav-logo-dot">.</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#contact" class="nav-cta">Say hello</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-stage">
+        <div class="hero-3d" id="heroCanvasContainer" aria-hidden="true"></div>
+        <h1 class="hero-headline" aria-label="Hello World, I'm Fares">
+          <span class="hl-line reveal">Hello</span>
+          <span class="hl-line reveal">World,</span>
+          <span class="hl-line reveal">I'm Fares</span>
+        </h1>
+        <p class="hero-side hero-side-left mono reveal">Graphic<br />Designer</p>
+        <p class="hero-side hero-side-right mono reveal">Motion<br />&amp; Video</p>
+      </div>
+
+      <div class="hero-under">
+        <p class="hero-intro reveal">
+          Hi I'm <strong>Fares Alyaqout</strong>, a graphic designer with 5+ years of experience
+          turning ideas into visuals. I work in
+          <span class="typed-wrap"><span id="typedRole"></span><span class="typed-cursor" aria-hidden="true">|</span></span>
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#work" class="btn btn-primary">
+            See my work
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat"><span class="stat-num" data-count="5">0</span><span class="stat-label">Years of experience</span></div>
+          <div class="stat"><span class="stat-num" data-count="6">0</span><span class="stat-label">Teams I've worked with</span></div>
+          <div class="stat"><span class="stat-num" data-count="100">0</span><span class="stat-label">Visuals created</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section-inner">
+        <p class="kicker mono reveal">01 — About</p>
+        <h2 class="section-title reveal">A little about me</h2>
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="portrait-scene reveal" id="portraitScene">
+              <div class="ps-stroke ps-stroke-1" data-depth="0.5" aria-hidden="true"></div>
+              <div class="ps-stroke ps-stroke-2" data-depth="0.35" aria-hidden="true"></div>
+              <svg class="ps-zigzag" data-depth="0.6" viewBox="0 0 62 26" aria-hidden="true">
+                <polyline points="3,21 13,6 23,21 33,6 43,21 53,6" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="ps-photo" data-depth="0.14">
+                <!-- Add your portrait here: images/portrait.png -->
+                <img src="images/portrait.png" alt="Portrait of Fares Alyaqout" />
+              </div>
+              <div class="ps-badge-wrap" data-depth="0.45" aria-hidden="true">
+              <svg class="ps-badge" viewBox="0 0 100 100">
+                <defs>
+                  <path id="psBadgeCircle" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
+                </defs>
+                <circle cx="50" cy="50" r="48" class="ps-badge-bg" />
+                <circle cx="50" cy="50" r="48" class="ps-badge-ring" />
+                <text class="ps-badge-text">
+                  <textPath href="#psBadgeCircle">fares alyaqout • graphic designer • open to work •</textPath>
+                </text>
+              </svg>
+              </div>
+            </div>
+          <div class="about-card reveal" data-tilt>
+            <p class="about-card-label mono">Exhibit A — The Designer</p>
+            <dl class="about-facts">
+              <div><dt>Currently</dt><dd>Software Engineering student, Kingdom University · Riyadh</dd></div>
+              <div><dt>Experience</dt><dd>5+ years in graphic design</dd></div>
+              <div><dt>Specialties</dt><dd>Graphic design · Motion · Video editing</dd></div>
+              <div><dt>Status</dt><dd><span class="status-dot" aria-hidden="true"></span>Open to design projects</dd></div>
+            </dl>
+          </div>
+          </div>
+          <div class="about-text reveal">
+            <p>
+              Design found me before code did. For the past <strong>5+ years</strong>,
+              I've been crafting visuals — logos, motion pieces, videos — that people
+              actually remember. What started as curiosity turned into a <em>craft</em>.
+            </p>
+            <p>
+              I work across <strong>graphic design, motion design, and video editing</strong>,
+              collaborating with teams to build visual identities and content that feels both
+              intentional and bold.
+            </p>
+            <p>
+              Now I'm also studying <strong>Software Engineering at Kingdom University</strong>
+              in Riyadh — which means I understand both the visual and the technical side of
+              building things. The best of both worlds.
+            </p>
+            <p class="about-quote">"Design is not how something looks — it's how it works."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="section-inner">
+        <p class="kicker mono reveal">02 — Skills</p>
+        <h2 class="section-title reveal">What I work with</h2>
+        <p class="section-sub reveal">The tools and disciplines I use to bring ideas to life.</p>
+        <div class="skills-grid">
+          <div class="skill-card reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <h3>Graphic Design</h3>
+            <p class="skill-desc">Visual design for brands, print, and digital media.</p>
+            <ul class="skill-tags mono">
+              <li>Photoshop</li><li>Illustrator</li><li>InDesign</li><li>Figma</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+            </div>
+            <h3>Video Editing</h3>
+            <p class="skill-desc">From raw footage to polished, story-driven videos.</p>
+            <ul class="skill-tags mono">
+              <li>Premiere Pro</li><li>DaVinci Resolve</li><li>Final Cut Pro</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Motion Design</h3>
+            <p class="skill-desc">Animated graphics that bring brands and stories to life.</p>
+            <ul class="skill-tags mono">
+              <li>After Effects</li><li>Cinema 4D</li><li>Lottie</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal" data-tilt>
+            <div class="skill-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <h3>Branding &amp; Identity</h3>
+            <p class="skill-desc">From concept to full visual identity — logos, type, and color.</p>
+            <ul class="skill-tags mono">
+              <li>Typography</li><li>Logo Design</li><li>Brand Guides</li><li>Social Media</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section" id="experience">
+      <div class="section-inner">
+        <p class="kicker mono reveal">03 — Experience</p>
+        <h2 class="section-title reveal">Where I've worked &amp; created</h2>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card" data-tilt>
+              <p class="timeline-date mono">2021 — Present</p>
+              <h3>Freelance Graphic Designer <span class="timeline-company">· Self-Employed</span></h3>
+              <p>Five years of building brands, designing social media content, crafting event graphics,
+              and creating visual identities for teams and startups across Saudi Arabia and beyond.</p>
+              <ul class="skill-tags mono"><li>Branding</li><li>Social Media</li><li>Print</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card" data-tilt>
+              <p class="timeline-date mono">2022 — Present</p>
+              <h3>Motion Designer &amp; Video Editor <span class="timeline-company">· Various Teams</span></h3>
+              <p>Collaborated with more than 6 teams including Torsracing, Sadeemracing, POVMUN,
+              KFUPMxMawhiba, Tharra, and FRQ Studio — delivering motion graphics, video edits, and
+              animated content for events, social media, and campaigns.</p>
+              <ul class="skill-tags mono"><li>After Effects</li><li>Premiere Pro</li><li>Motion Graphics</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card" data-tilt>
+              <p class="timeline-date mono">Sep 2026 — Present</p>
+              <h3>Software Engineering Student <span class="timeline-company">· Kingdom University · Riyadh</span></h3>
+              <p>Studying the technical side of building things — software systems, data structures, and
+              problem solving. The engineering mindset makes the design work sharper.</p>
+              <ul class="skill-tags mono"><li>Software Engineering</li><li>Problem Solving</li><li>Riyadh, KSA</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK (folder tabs) ============ -->
+    <section class="section section-dark" id="work">
+      <div class="section-inner">
+        <p class="kicker mono reveal">04 — Work</p>
+        <h2 class="section-title reveal">Things I've designed</h2>
+        <p class="section-sub reveal">Open a folder to take a look. Click a tab below.</p>
+
+        <div class="folders reveal">
+
+          <!-- TORSRACING -->
+          <div class="folder folder-red">
+            <button class="folder-tab" aria-expanded="false">
+              <span>Torsracing</span>
+              <span class="folder-tab-hint mono" aria-hidden="true">01</span>
+            </button>
+            <div class="folder-content">
+              <div class="folder-body">
+                <div class="folder-meta mono">
+                  <span>FILE 01</span>
+                  <span>Branding · Motion</span>
+                </div>
+                <div class="folder-text">
+                  <h3>Torsracing — visual identity for speed</h3>
+                  <p>Developed the complete visual identity for Torsracing — a Saudi racing team. The project
+                  covered logo design, team colors, race graphics, social media templates, and event collateral
+                  built to live at high speed.</p>
+                  <ul class="skill-tags mono"><li>Logo Design</li><li>Branding</li><li>Social Media</li><li>Motion Graphics</li></ul>
+                </div>
+                <div class="folder-images">
+                  <div class="project-shot">
+                    <img src="images/torsracing-1.png" alt="Torsracing — visual 1" loading="lazy" />
+                  </div>
+                  <div class="project-shot">
+                    <img src="images/torsracing-2.png" alt="Torsracing — visual 2" loading="lazy" />
+                  </div>
+                </div>
+                <div class="folder-links">
+                  <a href="https://www.instagram.com/torsracing/" target="_blank" rel="noopener" class="folder-link">View project
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SADEEMRACING -->
+          <div class="folder folder-purple">
+            <button class="folder-tab" aria-expanded="false">
+              <span>Sadeemracing</span>
+              <span class="folder-tab-hint mono" aria-hidden="true">02</span>
+            </button>
+            <div class="folder-content">
+              <div class="folder-body">
+                <div class="folder-meta mono">
+                  <span>FILE 02</span>
+                  <span>Branding · Motion</span>
+                </div>
+                <div class="folder-text">
+                  <h3>Sadeemracing — motorsport identity</h3>
+                  <p>Created the visual language for Sadeemracing from the ground up — logo system,
+                  color palette, race day graphics, and promotional content for social media and event coverage.</p>
+                  <ul class="skill-tags mono"><li>Logo Design</li><li>Motion Graphics</li><li>Social Media</li></ul>
+                </div>
+                <div class="folder-images">
+                  <div class="project-shot">
+                    <img src="images/sadeemracing-1.png" alt="Sadeemracing — visual 1" loading="lazy" />
+                  </div>
+                  <div class="project-shot">
+                    <img src="images/sadeemracing-2.png" alt="Sadeemracing — visual 2" loading="lazy" />
+                  </div>
+                </div>
+                <div class="folder-links">
+                  <a href="https://www.instagram.com/sadeemracing/" target="_blank" rel="noopener" class="folder-link">View project
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- POVMUN -->
+          <div class="folder folder-amber">
+            <button class="folder-tab" aria-expanded="false">
+              <span>POVMUN</span>
+              <span class="folder-tab-hint mono" aria-hidden="true">03</span>
+            </button>
+            <div class="folder-content">
+              <div class="folder-body">
+                <div class="folder-meta mono">
+                  <span>FILE 03</span>
+                  <span>Event Design · Print</span>
+                </div>
+                <div class="folder-text">
+                  <h3>POVMUN — conference identity</h3>
+                  <p>Full visual identity for the POVMUN Model United Nations conference — logo, committee
+                  graphics, delegate materials, social media campaign, and event signage designed to carry
+                  the weight of a serious conference.</p>
+                  <ul class="skill-tags mono"><li>Branding</li><li>Event Design</li><li>Print</li><li>Social Media</li></ul>
+                </div>
+                <div class="folder-images">
+                  <div class="project-shot">
+                    <img src="images/povmun-1.png" alt="POVMUN — visual 1" loading="lazy" />
+                  </div>
+                  <div class="project-shot">
+                    <img src="images/povmun-2.png" alt="POVMUN — visual 2" loading="lazy" />
+                  </div>
+                </div>
+                <div class="folder-links">
+                  <a href="https://www.instagram.com/povmun.shq/" target="_blank" rel="noopener" class="folder-link">View project
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KFUPMxMAWHIBA -->
+          <div class="folder folder-teal">
+            <button class="folder-tab" aria-expanded="false">
+              <span>KFUPMxMawhiba</span>
+              <span class="folder-tab-hint mono" aria-hidden="true">04</span>
+            </button>
+            <div class="folder-content">
+              <div class="folder-body">
+                <div class="folder-meta mono">
+                  <span>FILE 04</span>
+                  <span>Event Design · Motion</span>
+                </div>
+                <div class="folder-text">
+                  <h3>KFUPMxMawhiba — where education meets talent</h3>
+                  <p>Designed event collateral, promotional materials, and social media content for the
+                  KFUPM × Mawhiba gifted student program. Translated the collaboration's energy into
+                  a visual identity that felt both academic and inspiring.</p>
+                  <ul class="skill-tags mono"><li>Event Design</li><li>Social Media</li><li>Motion</li><li>Print</li></ul>
+                </div>
+                <div class="folder-images">
+                  <div class="project-shot">
+                    <img src="images/kfupm-1.png" alt="KFUPMxMawhiba — visual 1" loading="lazy" />
+                  </div>
+                  <div class="project-shot">
+                    <img src="images/kfupm-2.png" alt="KFUPMxMawhiba — visual 2" loading="lazy" />
+                  </div>
+                </div>
+                <div class="folder-links">
+                  <a href="https://www.instagram.com/kfupmmawhiba/" target="_blank" rel="noopener" class="folder-link">View project
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- THARRA -->
+          <div class="folder folder-rose">
+            <button class="folder-tab" aria-expanded="false">
+              <span>Tharra / Tilad</span>
+              <span class="folder-tab-hint mono" aria-hidden="true">05</span>
+            </button>
+            <div class="folder-content">
+              <div class="folder-body">
+                <div class="folder-meta mono">
+                  <span>FILE 05</span>
+                  <span>Brand Identity</span>
+                </div>
+                <div class="folder-text">
+                  <h3>Tharra / Tilad — brand identity</h3>
+                  <p>Developed the brand identity for Tharra (now rebranded as Tilad) — building the full
+                  visual system including logo design, color palette, typography, and digital assets ready
+                  to deploy across print and digital channels.</p>
+                  <ul class="skill-tags mono"><li>Brand Identity</li><li>Typography</li><li>Digital Assets</li></ul>
+                </div>
+                <div class="folder-images">
+                  <div class="project-shot">
+                    <img src="images/tharra-1.jpeg" alt="Tharra / Tilad — visual 1" loading="lazy" />
+                  </div>
+                  <div class="project-shot">
+                    <img src="images/tharra-2.jpeg" alt="Tharra / Tilad — visual 2" loading="lazy" />
+                  </div>
+                </div>
+                <div class="folder-links">
+                  <a href="https://tilad.org" target="_blank" rel="noopener" class="folder-link">View project
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FRQ STUDIO -->
+          <div class="folder folder-indigo">
+            <button class="folder-tab" aria-expanded="false">
+              <span>FRQ Studio</span>
+              <span class="folder-tab-hint mono" aria-hidden="true">06</span>
+            </button>
+            <div class="folder-content">
+              <div class="folder-body">
+                <div class="folder-meta mono">
+                  <span>FILE 06</span>
+                  <span>Motion · Video · Design</span>
+                </div>
+                <div class="folder-text">
+                  <h3>FRQ Studio — motion &amp; visual production</h3>
+                  <p>A creative studio collaboration focused on motion graphics, video editing, and visual
+                  design production. Developed motion templates, design systems, and edited video content
+                  for the studio's productions and clients.</p>
+                  <ul class="skill-tags mono"><li>Motion Design</li><li>Video Editing</li><li>Design Systems</li></ul>
+                </div>
+                <div class="folder-images">
+                  <div class="project-shot">
+                    <img src="images/frq-1.png" alt="FRQ Studio — visual 1" loading="lazy" />
+                  </div>
+                  <div class="project-shot">
+                    <img src="images/frq-2.png" alt="FRQ Studio — visual 2" loading="lazy" />
+                  </div>
+                </div>
+                <div class="folder-links">
+                  <a href="https://frq.studio/" target="_blank" rel="noopener" class="folder-link">View project
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-contact" id="contact">
+      <div class="section-inner contact-inner">
+        <p class="kicker mono reveal">05 — Contact</p>
+        <h2 class="contact-title reveal">Let's create<br /><em>something.</em></h2>
+        <p class="contact-blurb reveal">
+          My inbox is always open — whether it's a design project, a collaboration,
+          or just to say hi. I usually reply within a day.
+        </p>
+        <a href="mailto:faresalyaqout2@gmail.com" class="btn btn-primary btn-lg reveal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Say hello
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-left">
+        <p class="footer-tag">Designed &amp; coded — every pixel of it.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="mailto:faresalyaqout2@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/fares-alyaqout-771a81331/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </nav>
+    </div>
+    <p class="footer-giant" aria-hidden="true">Fares <em>Alyaqout</em></p>
+  </footer>
+
+  <script type="module" src="js/scene.js"></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
